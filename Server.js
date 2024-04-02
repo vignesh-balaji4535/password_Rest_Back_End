@@ -10,11 +10,7 @@ dotenv.config();
 const PORT =process.env.PORT;
 const App=express();
 App.use(express.json());
-App.use(cors(
-    {
-        origin:"http://localhost:5173"
-    }
-))
+App.use(cors())
 
 App.use("/api/user",UserRouter);
 
